@@ -1,82 +1,18 @@
-/* RESET */
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #f4f9f9;
-  color: #333;
-}
+function showSavings() {
+  const dailyCost = 30000; // rupiah per day
+  const yearly = dailyCost * 365;
 
-/* HERO */
-.hero {
-  background: linear-gradient(135deg, #2ec4b6, #90dbd2);
-  color: white;
-  text-align: center;
-  padding: 70px 20px;
-}
+  const result = document.getElementById("savings");
 
-.hero h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
-}
+  result.innerText =
+    "Dalam setahun, uang yang bisa disimpan: Rp " +
+    yearly.toLocaleString("id-ID");
 
-.hero p {
-  font-size: 18px;
-  max-width: 600px;
-  margin: auto;
-}
-
-/* MAIN CONTAINER */
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-/* CARDS */
-.card {
-  background-color: white;
-  border-radius: 15px;
-  padding: 30px;
-  margin-bottom: 30px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-.card h2 {
-  margin-top: 0;
-  color: #2ec4b6;
-}
-
-.card.soft {
-  background-color: #e8f6f5;
-}
-
-/* BUTTON */
-button {
-  margin-top: 15px;
-  padding: 12px 20px;
-  background-color: #2ec4b6;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #219e94;
-}
-
-/* RESULT TEXT */
-.result {
-  margin-top: 15px;
-  font-weight: bold;
-  color: #1b7f77;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #ddeeee;
-  font-size: 14px;
+  // small visual effect
+  result.style.opacity = "0";
+  result.style.transition = "opacity 0.6s ease";
+  
+  setTimeout(() => {
+    result.style.opacity = "1";
+  }, 50);
 }
