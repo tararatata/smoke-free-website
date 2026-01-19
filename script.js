@@ -1,6 +1,82 @@
-function showSavings() {
-  let daily = 30000;
-  let yearly = daily * 365;
-  document.getElementById("savings").innerText =
-    "Uang setahun: Rp " + yearly.toLocaleString();
+/* RESET */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f9f9;
+  color: #333;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #2ec4b6, #90dbd2);
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* MAIN CONTAINER */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* CARDS */
+.card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #2ec4b6;
+}
+
+.card.soft {
+  background-color: #e8f6f5;
+}
+
+/* BUTTON */
+button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background-color: #2ec4b6;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #219e94;
+}
+
+/* RESULT TEXT */
+.result {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #1b7f77;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ddeeee;
+  font-size: 14px;
 }
