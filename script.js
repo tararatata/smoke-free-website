@@ -1,18 +1,39 @@
-function showSavings() {
-  const dailyCost = 30000; // rupiah per day
-  const yearly = dailyCost * 365;
+// Toggle accordion sections
+function toggleSection(button) {
+  const content = button.nextElementSibling;
 
+  if (content.style.maxHeight) {
+    content.style.maxHeight = null;
+    button.innerText = "Baca Selengkapnya";
+  } else {
+    content.style.maxHeight = content.scrollHeight + "px";
+    button.innerText = "Tutup";
+  }
+}
+
+// Savings calculator
+function showSavings() {
+  const daily = document.getElementById("dailyCost").value;
   const result = document.getElementById("savings");
 
+  if (!daily || daily <= 0) {
+    result.innerText = "Masukkan angka yang valid.";
+    return;
+  }
+
+  const yearly = daily * 365;
+
   result.innerText =
-    "Dalam setahun, uang yang bisa disimpan: Rp " +
+    "Dalam setahun kamu bisa menyimpan: Rp " +
     yearly.toLocaleString("id-ID");
 
-  // small visual effect
   result.style.opacity = "0";
-  result.style.transition = "opacity 0.6s ease";
-  
   setTimeout(() => {
     result.style.opacity = "1";
-  }, 50);
+  }, 100);
+}
+
+// Dark mode toggle
+function toggleDarkMode() {
+  document.body.classList.toggle("dark");
 }
