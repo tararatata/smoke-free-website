@@ -1,21 +1,36 @@
-/* RESET */
+/* GENERAL */
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #f4f9f9;
+  background: linear-gradient(135deg, #e0f7f5, #f4f9f9);
   color: #333;
+  transition: 0.4s ease;
+}
+
+/* DARK MODE */
+body.dark {
+  background: linear-gradient(135deg, #1c1c1c, #2b2b2b);
+  color: #f1f1f1;
+}
+
+body.dark .card {
+  background: #333;
+}
+
+body.dark footer {
+  background: #222;
 }
 
 /* HERO */
 .hero {
-  background: linear-gradient(135deg, #2ec4b6, #90dbd2);
+  background: linear-gradient(135deg, #1b7f77, #2ec4b6);
   color: white;
   text-align: center;
-  padding: 70px 20px;
+  padding: 90px 20px;
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 48px;
   margin-bottom: 10px;
 }
 
@@ -25,7 +40,7 @@ body {
   margin: auto;
 }
 
-/* MAIN CONTAINER */
+/* CONTAINER */
 .container {
   max-width: 900px;
   margin: 40px auto;
@@ -34,11 +49,17 @@ body {
 
 /* CARDS */
 .card {
-  background-color: white;
-  border-radius: 15px;
+  background: white;
+  border-radius: 20px;
   padding: 30px;
   margin-bottom: 30px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
 }
 
 .card h2 {
@@ -46,38 +67,76 @@ body {
   color: #2ec4b6;
 }
 
-.card.soft {
-  background-color: #e8f6f5;
+/* INPUT */
+input {
+  margin-top: 15px;
+  padding: 12px;
+  width: 100%;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 14px;
 }
 
-/* BUTTON */
+/* BUTTONS */
 button {
   margin-top: 15px;
   padding: 12px 20px;
-  background-color: #2ec4b6;
+  background: #2ec4b6;
   color: white;
   border: none;
   border-radius: 25px;
-  font-size: 14px;
   cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s ease;
 }
 
 button:hover {
-  background-color: #219e94;
+  background: #219e94;
+  transform: scale(1.05);
 }
 
-/* RESULT TEXT */
+/* TOGGLE BUTTON */
+.toggle-btn {
+  background: #ff7b54;
+}
+
+.toggle-btn:hover {
+  background: #e3643b;
+}
+
+/* HIDDEN CONTENT */
+.hidden-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+/* RESULT */
 .result {
   margin-top: 15px;
   font-weight: bold;
   color: #1b7f77;
+  transition: opacity 0.5s ease;
+}
+
+/* DARK MODE BUTTON */
+.dark-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: black;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #ddeeee;
+  background: #ddeeee;
   font-size: 14px;
 }
-
