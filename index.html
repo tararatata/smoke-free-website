@@ -7,39 +7,49 @@
 </head>
 <body>
 
-  <!-- HERO SECTION -->
+  <!-- DARK MODE TOGGLE -->
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+
+  <!-- HERO -->
   <header class="hero">
     <h1>A Life Without Nicotine</h1>
     <p>Hidup lebih lega, lebih sehat, dan lebih bebas tanpa rokok dan vape.</p>
   </header>
 
-  <!-- CONTENT -->
   <main class="container">
 
+    <!-- SECTION 1 -->
     <section class="card">
       <h2>🌬️ Bernapas Lebih Mudah</h2>
-      <p>
-        Saat nikotin berhenti, paru-paru mulai membersihkan diri.
-        Napas terasa lebih ringan dan tubuh lebih kuat.
-      </p>
+      <button class="toggle-btn" onclick="toggleSection(this)">Baca Selengkapnya</button>
+      <div class="hidden-content">
+        <p>
+          20 menit setelah berhenti, tekanan darah mulai normal.
+          Dalam beberapa minggu, fungsi paru-paru meningkat.
+          Tubuh mulai memperbaiki dirinya secara alami.
+        </p>
+      </div>
     </section>
 
+    <!-- SECTION 2 -->
     <section class="card">
-      <h2>💸 Uang yang Bisa Diselamatkan</h2>
-      <p>
-        Rokok dan vape menghabiskan uang tanpa terasa.
-        Coba lihat berapa banyak yang bisa disimpan dalam setahun.
-      </p>
-      <button onclick="showSavings()">Hitung uang setahun</button>
+      <h2>💸 Hitung Uang yang Bisa Disimpan</h2>
+      <input type="number" id="dailyCost" placeholder="Masukkan biaya rokok per hari (Rp)">
+      <button onclick="showSavings()">Hitung Sekarang</button>
       <p id="savings" class="result"></p>
     </section>
 
-    <section class="card soft">
+    <!-- SECTION 3 -->
+    <section class="card">
       <h2>❤️ Catatan Kecil</h2>
-      <p>
-        Website ini bukan untuk menghakimi.
-        Ini dibuat karena peduli — setiap langkah kecil itu berarti.
-      </p>
+      <button class="toggle-btn" onclick="toggleSection(this)">Baca Pesan</button>
+      <div class="hidden-content">
+        <p>
+          Website ini bukan untuk menghakimi.
+          Ini dibuat karena peduli — setiap langkah kecil itu berarti.
+          Kamu tidak sendirian dalam proses ini.
+        </p>
+      </div>
     </section>
 
   </main>
@@ -51,4 +61,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
